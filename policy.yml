@@ -1,0 +1,27 @@
+# the high level policy
+policy:
+  approval:
+    - and:
+      - security team approval
+      - Dev exp team approval
+
+# the list of rules
+approval_rules:
+  - name: security team approval
+    if:
+    repository:
+      matches:
+        - "callmegreg-demo-org/restricted-repo"
+    requires:
+      count: 1
+      teams:
+        - "callmegreg-demo-org/security-team"
+  - name: Dev exp team approval
+    if:
+    repository:
+      matches:
+        - "callmegreg-demo-org/restricted-repo"
+    requires:
+      count: 1
+      teams:
+        - "callmegreg-demo-org/dev-exp-team"
