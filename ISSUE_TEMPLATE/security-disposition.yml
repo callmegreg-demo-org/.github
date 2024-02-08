@@ -4,24 +4,19 @@ title: "Security Alert Disposition | <ALERT_ID>"
 labels: Security Alert Disposition
 body:
   - type: markdown
-    label: "ACTION REQUIRED"
     attributes:
-      value: |
-      "PLEASE ASSIGN THIS ISSUE TO AN ASE OR LEAD DEVELOPER ON YOUR TEAM"
-        
+      value: "ACTION REQUIRED: Please assign this issue to an ASC or lead developer on your team"
   - type: textarea
     attributes:
-      label: "Alert Link(s)"
+      label: Alert Link(s)
       description: "The URL(s) for the security alert"
-      placeholder: |
-        https://github.com/your-org/your-repo/security/secret-scanning/123
+      placeholder: "https://github.com/your-org/your-repo/security/secret-scanning/123"
     validations:
       required: true
-
-  - type: checkbox
+  - type: dropdown
     attributes:
-      label: "Reason"
-      description: "Why should this alert be closed?"
+      label: Reason
+      description: "Reason for closing the alert"
       options:
         - label: False positive
         - label: Revoked
