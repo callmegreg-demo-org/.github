@@ -1,7 +1,6 @@
 name: "Disposition a Security Alert"
 description: "Trigger a review for a security alert"
 title: "Security Alert Disposition | <ALERT_ID>"
-labels: Security Alert Disposition
 body:
   - type: markdown
     attributes:
@@ -18,8 +17,12 @@ body:
       label: Reason
       description: "Reason for closing the alert"
       options:
-        - label: False positive
-        - label: Revoked
-        - label: Used in tests
+        - False positive
+        - Revoked
+        - Used in tests
     validations:
       required: true
+  - type: textarea
+    attributes:
+      label: Additional comments (optional)
+      description: Any additional justification or evidence
