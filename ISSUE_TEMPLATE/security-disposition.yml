@@ -1,6 +1,6 @@
-name: Disposition a Security Alert
-description: Trigger a review for a security alert
-title: Security Alert Disposition | <ALERT_ID>
+name: "Disposition a Security Alert"
+description: "Trigger a review for a security alert"
+title: "Security Alert Disposition | <ALERT_ID>"
 labels: Security Alert Disposition
 body:
   - type: markdown
