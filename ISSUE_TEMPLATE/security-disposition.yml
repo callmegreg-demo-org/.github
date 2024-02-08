@@ -1,0 +1,29 @@
+name: Disposition a Security Alert
+description: Trigger a review for a security alert
+labels: Security Alert Disposition
+body:
+  - type: markdown
+    label: "ACTION REQUIRED"
+    attributes:
+      value: |
+      "PLEASE ASSIGN THIS ISSUE TO AN ASE OR LEAD DEVELOPER ON YOUR TEAM"
+        
+  - type: textarea
+    attributes:
+      label: "Alert Link(s)"
+      description: "The URL(s) for the security alert"
+      placeholder: |
+        https://github.com/your-org/your-repo/security/secret-scanning/123
+    validations:
+      required: true
+
+  - type: checkbox
+    attributes:
+      label: "Reason"
+      description: "Why should this alert be closed?"
+      options:
+        - label: False positive
+        - label: Revoked
+        - label: Used in tests
+    validations:
+      required: true
